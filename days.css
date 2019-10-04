@@ -1,0 +1,35 @@
+body
+	{
+		background: url(back.jpg);
+		background-size:cover;
+		background-attachment: fixed;
+
+	}
+	.panel
+	{
+		opacity: 0.8;
+		width: 600px;
+		height: 450px;
+		margin: 90px 0px 0px 30px;
+		background-color:#006633;
+	}
+	label
+	{
+	 font-family: fantasy;
+	 font-size: 25px;
+  color: #FFD700;
+  display: block;
+
+}
+h1
+{
+	color: #CCCC00;
+}
+button
+{
+	 border-radius: 28px;
+	font-size: 20px;
+	padding: 10px 24px;
+	background-color: #32CD32;
+	font-family: fantasy;
+}
