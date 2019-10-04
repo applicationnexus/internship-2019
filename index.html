@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" type="text/css" href="Date.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Date Project</title>
+</head>
+<body>
+  <div class="container">
+    <div class="sub_container">
+      <input id="day_count" type="hidden" name="day" value="0">
+          <p id="day" class="day">Monday</p>
+      <input id="month_count" type="hidden" name="month" value="0">
+          <p id="month" class="month">January</p>
+    <button class="btn_day" onclick="day_chenge()">Chenge Day</button>
+    <script>
+    function day_chenge() {
+      var counter=document.getElementById("day_count").value;
+      var counter1=parseInt(counter);
+      var day= ["Monday","Tuesday","Wednesday","Thusday","Friday","Saturday","Sunday"];
+      if(counter1<6)
+      {
+      document.getElementById("day").innerHTML = day[++counter1];
+      document.getElementById("day_count").value=counter1;
+    }
+    else {
+      document.getElementById("day").innerHTML = day[0];
+      document.getElementById("day_count").value=0;
+    }
+    }
+    </script>
+
+    <button class="btn_month" onclick="month_chenge()">Chenge Month</button>
+
+    <script>
+    function month_chenge() {
+      var counter=document.getElementById("month_count").value;
+      var counter1=parseInt(counter);
+      var month=["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+      if(counter1<11)
+      {
+      document.getElementById("month").innerHTML = month[++counter1];
+      document.getElementById("month_count").value=counter1;
+    }
+    else {
+      document.getElementById("month").innerHTML = month[0];
+      document.getElementById("month_count").value=0;
+    }
+    }
+    </script>
+
+  </div>
+  </div>
+</body>
+</html>
