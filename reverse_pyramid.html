@@ -24,14 +24,17 @@
 <body>
 <div id="star_center">
 <script type="text/javascript" >
-	var rows=prompt('Enter number of row for pyramid between 1 to 10 for better result') ;
-	if(rows <=10 && rows > 0){  
+	var rows=prompt('Enter number of row for pyramid between 1 to 10 for better result') ;   //taking numer of rows from user
+	if(rows <=10 && rows > 0){   
 		var i,j;
-		for(i=1;i<=rows;i++)
+		for(i=1;i<=rows;i++)  
 		{
+		
+		 // Printing spaces 
 			for(j=1;j<i;j++)
 				document.write('&nbsp');
 			
+			// Printing stars
 			for(j=1;j<=(rows*2-(i*2-1));j++)
 				document.write('*'.fontsize(10));
 		
