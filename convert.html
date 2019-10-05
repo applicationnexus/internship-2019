@@ -1,0 +1,170 @@
+<html>
+<head>
+<style>
+
+.c1 															
+{
+  width: 30%;
+  border-radius: 5px;
+  background-color: rgba(0,0,0,0.09);
+  padding: 12px;
+}
+.c2 															
+{
+  width: 30%;
+  border-radius: 5px;
+  background-color: rgba(0,0,0,0.09);
+  padding: 12px;
+}
+.button															
+{
+	border-radius: 5px;
+	background-color:orange;
+	font-size:18
+}
+.sel															
+{
+	border-radius: 5px;
+	font-size:18
+}
+.input															
+{
+	border-radius: 5px;
+	font-size:18;
+	width:48%;
+	background-color:white;
+}
+.p1																
+{
+	color:orange;
+	font-size:20;
+	font-weight:bold;
+}
+.p2																
+{
+	font-size:20;
+	background-color:white;
+	width:48%;
+	font-weight:bold
+}
+
+</style>
+</head>
+<body>
+<center>
+<div class="c1" align="left">
+	<h3>Data Storage Converter</h3>
+	Convert from: <br/>
+	<select id="from" class="sel">
+		<option value="kb" selected>Kilobytes [KB]</option>
+		<option value="mb">Megabytes [MB]</option>
+		<option value="gb">Gigabytes [GB]</option>
+		<option value="tb">Terabytes [TB]</option>
+	</select>
+	<br/><br/>
+	Convert to: <br/>
+	<select id="to" class="sel">
+		<option value="kb">Kilobytes [KB]</option>
+		<option value="mb" selected>Megabytes [MB]</option>
+		<option value="gb">Gigabytes [GB]</option>
+		<option value="tb">Terabytes [TB]</option>
+	</select>
+	<br/><br/>
+	Value: <br/>
+	<input type="text"  id="t1" class="input">
+	<br/><br/>
+	<input type="submit" value="convert" class="button" onclick="convert();">
+</div>
+
+<br>
+
+<div class="c2" align="left">
+	<p id="p1" class="p1" ></p>
+	<p id="p2" class="p2" ></p>
+</div>
+</center>
+<script>
+	
+	function convert()                                            //function for data storage conversion
+	{
+		
+		var v1=document.getElementById('from').value;
+		var v2=document.getElementById('to').value;
+		var val=parseFloat(document.getElementById('t1').value);
+		
+		
+		var result;
+		var no= /[0-9]/;
+		if(!no.test(val))
+		{
+			
+			alert("please insert digit value to convert !!!!");
+			document.getElementById('p2').innerHTML=" ";
+			
+		}
+		else
+		{
+			switch(v1)												//for first dropdown list
+			{
+				case 'kb' :
+							switch(v2)								//for second dropdown list
+							{	
+								case 'kb' :result=val;
+								break;
+								case 'mb' : result=val/1024;
+								break;
+								case 'gb' : result=val/(1024*1024);
+								break;
+								case 'tb' : result=val/(1024*1024*1024);
+								break;
+							}
+				break;
+				case 'mb' :
+							switch(v2)
+							{
+								case 'mb' :result=val;
+								break;
+								case 'kb' : result=val*1024;
+								break;
+								case 'gb' : result=val/1024;
+								break;
+								case 'tb' : result=val/(1024*1024);
+								break;
+							}
+				break;
+				case 'gb' :
+							switch(v2)
+							{
+								case 'gb' :result=val;
+								break;
+								case 'kb' : result=val*1024*1024;
+								break;
+								case 'mb' : result=val*1024;
+								break;
+								case 'tb' : result=val/1024;
+								break;
+							}
+				break;
+				case 'tb' :
+							switch(v2)
+							{
+								case 'tb' :result=val;
+								break;
+								case 'kb' : result=val*1024*1024*1024;
+								break;
+								case 'mb' : result=val*1024*1024;
+								break;
+								case 'gb' : result=val*1024;
+								break;
+							}
+				break;
+			}
+			document.getElementById('p1').innerHTML="Convert "+val+" "+v1+" to "+v2;
+			document.getElementById('p2').innerHTML=result;  							   //printing result
+		}
+		 
+	}
+	
+</script>
+</body>
+</html>
