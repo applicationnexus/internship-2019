@@ -1,0 +1,47 @@
+<html>
+<head>
+<script>
+	function show(){
+		let min_stars=+document.getElementById('min_stars').value;   //get value of star field
+		let p_height=+document.getElementById('p_height').value;	//get value of height field
+		let left_star=min_stars;				//initial number of stars for left pyramid	
+		let left_height=p_height;				//height of left pyramid
+		let right_star=min_stars;               //initial number of stars for right pyramid
+		let right_height=p_height;				//height of right pyramid
+		right_space=right_height; 
+		document.write("<div style='display:flex;justify-content: center;margin-top:13%'> <div style='text-align:center'>");
+		for(i=1;i<=left_height;i++)
+		{
+			for(j=1;j<left_height;j++)              //for loop for left pyramid's spcaces
+				document.write('&nbsp;')
+			for(j=1;j<=left_star;j++)
+				document.write('*'.fontsize(6));    //fop loop to print stars of left pyramid
+						
+			left_star+=2;							//for off number of stars
+			document.write('<br>');
+		}	
+		document.write('</div>');
+		document.write("<div style='text-align:center'>");
+		for(i=1;i<=right_height;i++)
+		{
+			for(j=1;j<right_height-4;j++)			//for loop for right pyramid's spcaces
+				document.write('&nbsp');
+
+			for(j=1;j<=right_star;j++)				//fop loop to print stars of left pyramid
+				document.write('*'.fontsize(6));
+	
+			right_star+=2;							//for off number of stars
+			document.write('<br>');
+				}
+			}
+	document.write('</div> </div>');
+</script>
+</head>
+<body>
+<form onsubmit="show()" style="text-align: center;margin-top: 15%">
+	Minimum Stars: <input type="text" name="min_stars" id="min_stars" required><br>
+	Height: <input style="margin-left: 56;margin-top:5" type="text" name="p_height " id="p_height"required><br>
+	<input style="margin-top:5;margin-left:224;" type="submit" value="Submit">
+</form>
+</body>
+</html>
