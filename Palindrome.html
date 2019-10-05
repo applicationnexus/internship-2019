@@ -1,0 +1,59 @@
+<html>
+<head>
+	<title> Palindrome Cheker </title>
+	<style>	
+		.flex-container {
+  				display: flex;
+				justify-content: center;
+			}
+		.flex-container > div {
+  				height: 200px;
+				padding: 15px;
+				margin: 30px 450px 75px 400px;
+  				background-color: skyblue;
+  				align-items: center;
+			}
+	</style>
+	<script>
+	function palindrome()										//function to check given number is palindrome or not
+	{
+
+		var remainder,temp,rev=0;
+		var no=document.getElementById("number").value;
+		temp=no; 												//save given number to temporary variable temp
+		if(isNaN(no)|| no=="")									//Only numbers allowed
+		{
+			document.getElementById("p").innerHTML="Please valid enter the Number"
+		}
+		else
+		{
+			while(no>0)											//Loop for reverse the number	
+			{
+				remainder=no%10;												
+				no=parseInt(no/10);
+				rev=rev*10+remainder;
+			}
+			if(rev==temp)										//Check if reverse is equal to given number
+			{
+				document.getElementById("p").innerHTML="The "+ temp +" number is Palindrome"
+			}
+			else
+			{
+				document.getElementById("p").innerHTML="The "+ temp +" number is not a Palindrome"
+			}
+		}	
+	}
+	</script>
+</head>
+<body>
+<div class="flex-container">
+	<div>
+	<h2>Where a number is palindrome is not</h2>
+	Enter the number : <input type="text" id="number" placeholder="Number">
+	<hr color="green"><br>
+	<center><button onclick="palindrome()">CHECK</button></center>			<!--call palindrome function when Button click-->
+	<p align="center" id="p"> </p>									
+	</div>
+</div>
+</body>
+</html>
