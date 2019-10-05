@@ -1,20 +1,25 @@
 .container{
-  height:550px;
-  width: 550px;
-  background-color: #ABB138;
+  height:350px;
+  width: 650px;
+  background-color: #7B7D77;
   border-radius: 25px;
   position:absolute;
-  border: 5px solid black;
+  border: 5px solid #5D5E58;
+  margin: auto;
+  top: 0;
+ right: 0;
+ bottom: 0;
+ left: 0;
 }
 .sub_container{
-  height: 400px;
+  height: 300px;
   width: 400px;
-  background-color: #F6FF42;
-  margin-left: 80px;
-  margin-top: 80px;
+  background-color: #AFBF8E;
+  margin-left: 125px;
+  margin-top: 20px;
   position: relative;
   border-radius: 25px;
-  border: 2px solid black;
+  border: 2px solid #A8AD9C;
   text-align: center;
 }
 p{
@@ -27,9 +32,9 @@ font-family: Courier;
 }
 button{
   height: 50px;
-  margin-top: 120px;
+  margin-top: 30px;
   width: 150px;
-  margin-left: 35px;
+  margin-left: 20px;
   text-align: center;
   cursor: pointer;
   outline: none;
