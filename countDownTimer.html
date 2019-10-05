@@ -1,0 +1,100 @@
+<html>
+<head>
+	<title>CountDown Clock</title>
+	<style>
+		body{
+			margin:0;
+			padding:0;
+			background-color: #6AB04A;
+		}
+		.flex-container {
+  display: flex;
+ 
+  justify-content: center;
+}
+
+.flex-container > div {
+  background-color: rgba(0,0,0,0.3);
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+  height: 30px;
+  width: 45px;
+  align-items: center;
+}
+.header{
+	padding-top: 30px;
+}
+#demo{
+  font-size: 20px;
+ 
+}
+input{
+    height:35px;
+    width: 250px;
+}
+	</style>
+	<script type="text/javascript">
+   
+function counter()
+ {
+      var endtime=document.getElementById("dat").value; //endtime takes the Date input from the input box
+      var time = Date.parse(endtime) - Date.parse(new Date()); //time= difference between input date and current date
+
+         //Validation for not taking new date less than current date       
+             if(Date.parse(endtime)<Date.parse(new Date())){
+                  alert("please enter greater time or date than current");
+                } 
+
+       var seconds = Math.floor( (time/1000) % 60 ); //calculating seconds
+       var minutes = Math.floor( (time/1000/60) % 60 ); //calculating minutes
+       var hours = Math.floor( (time/(1000*60*60)) % 24 ); //calculating hours
+       var days = Math.floor( time/(1000*60*60*24) ); //calculating days
+
+
+    //Inserting the time attributes
+        document.getElementById('demo').innerHTML="";
+         document.getElementById('d').innerHTML=days;  
+          document.getElementById('h').innerHTML=hours;  
+          document.getElementById('m').innerHTML=minutes;  
+           document.getElementById('s').innerHTML=seconds;  
+
+    //Setting Timeout function which will call counter function and refresh every 1sec
+         var q = setTimeout(counter,1000);
+
+    //If time=0 then clearning the timeout so the countdown will stop             
+         if(time<=0)
+         {
+        	clearTimeout(q);
+  	        document.getElementById('demo').innerHTML="Time Up"; //printing  Time Up
+            document.getElementById('d').innerHTML=0;  
+            document.getElementById('h').innerHTML=0;  
+            document.getElementById('m').innerHTML=0;  
+            document.getElementById('s').innerHTML=0;  	
+        }
+}
+</script>
+</head>
+<body>
+	<div class="header">
+	<center>
+	<input type="datetime-local" id="dat"><br><br> 
+	<button onclick="counter()">Submit</button>
+	<h1>CountDown Clock</h1>
+	</center>
+	</div>
+	<div class="flex-container">
+  <div id="d"></div>
+  <div id="h"></div>
+  <div id="m"></div>  
+  <div id="s"></div>
+</div>
+<div class="flex-container">
+<div>Day</div>
+<div>Hrs</div>
+<div>Min</div>
+<div>Sec</div>
+</div>
+<center><div id="demo"></div></center>
+</body>
+</html>
