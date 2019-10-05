@@ -1,0 +1,106 @@
+body{background-color:Lavender;}
+
+.a a:hover{ background-color:DarkGray;}
+.b a:hover{ background-color:DarkGray;}
+.c a:hover{ background-color:DarkGray;}
+.d a:hover{ background-color:DarkGray;}
+.e a:hover{ background-color:DarkGray;}
+.f a:hover{ background-color:DarkGray;}
+.g a:hover{ background-color:DarkGray;}
+
+.a a:active{ background-color:MediumPurple;
+color:White;}
+.b a:active{ background-color:MediumPurple;
+color:White;}
+.c a:active{ background-color:MediumPurple;
+color:White;}
+.d a:active{ background-color:MediumPurple;
+color:White;}
+.e a:active{ background-color:MediumPurple;
+color:White;}
+.f a:active{ background-color:MediumPurple;
+color:White;}
+.g a:active{ background-color:MediumPurple;
+color:White;}
+
+
+
+
+.i h3{font-size:33px;
+box-shadow: 5px 10px 8px #888888;
+background-color:LightSlateGray;
+outline-style:groove ;
+outline-color:Indigo;
+padding-top:3px;
+padding-bottom:3px;
+ text-align:center;}
+
+.a a{font-size:25px;
+box-shadow: 5px 10px 8px #888888;
+background-color:LightGray; 
+padding-top:3px;
+padding-left: 30px;
+padding-right:200px;
+padding-bottom:3px;
+ text-align:center ;}
+
+
+.b a{font-size:25px;
+box-shadow: 5px 10px 8px #888888;
+background-color:LightGray;
+padding-top:3px;
+padding-left: 30px;
+padding-right:11px;
+padding-bottom:3px;
+ text-align:center ;}
+
+
+.c a{font-size:25px;
+box-shadow: 5px 10px 8px #888888;
+background-color:LightGray;
+padding-top:3px;
+padding-left: 30px;
+padding-right:125px;
+padding-bottom:3px;
+ text-align:center ;}
+
+
+.d a{font-size:25px;
+box-shadow: 5px 10px 8px #888888;
+background-color:LightGray;
+padding-top:3px;
+padding-left: 30px;
+padding-right:202px;
+padding-bottom:3px;
+ text-align:center ;}
+
+
+
+.e a{font-size:25px;
+box-shadow: 5px 10px 8px #888888;
+background-color:LightGray;
+padding-top:3px;
+padding-left: 30px;
+padding-right:230px;
+padding-bottom:3px;
+ text-align:center ;}
+
+
+.f a{font-size:25px;
+box-shadow: 5px 10px 8px #888888;
+background-color:LightGray;
+padding-top:3px;
+padding-left: 30px;
+padding-right:127px;
+padding-bottom:3px;
+ text-align:center ;}
+
+
+.g a{font-size:25px;
+box-shadow: 5px 10px 8px #888888;
+background-color:LightGray;
+padding-top:3px;
+padding-left: 30px;
+padding-right:175px;
+padding-bottom:3px;
+ text-align:center ;}

@@ -1,0 +1,18 @@
+body{background-color:Silver;
+box-shadow: 5px 10px 8px #888888;}
+
+.img img{
+float: left;
+width: 170px;
+height: 165px;
+background:"White";
+border: 1px;
+}
+
+.heading h1{
+text-shadow:2px 2px 8px White;
+position: relative;
+font-size: 80;
+top: 18px;
+left: 10px;
+}

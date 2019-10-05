@@ -1,0 +1,28 @@
+<html>
+<head><title>Variable Scope</title>
+<style>
+	body{ background-color:AliceBlue;}
+	h3{font-size:35px;
+	text-shadow: 1px 1px 8px DarkGray;}
+	.par p{font-size:20px;}
+	
+</style>
+</head>
+
+<body>
+<h3>Variable Scope</h3>
+<div class="par">
+<p>To work with JavaScript efficiently, one of the first things you need to understand is the concept of variable scope. The scope of a variable is controlled by the location of the variable declaration, and defines the part of the program where a particular variable is accessible.</p>
+
+<p>Scoping rules vary from language to language.<br> <br><b>JavaScript has two scopes –<br><ul >
+<li>Global</li>
+<br>
+<li>Local</li></b>
+</ul>
+ <p>Any variable declared outside of a function belongs to the global scope, and is therefore accessible from anywhere in your code. Each function has its own scope, and any variable declared within that function is only accessible from that function and any nested functions. Because local scope in JavaScript is created by functions, it’s also called function scope. When we put a function inside another function, then we create nested scope.</p>
+
+<p>Currently, JavaScript, unlike many other languages, does not support block level scoping. This means that declaring a variable inside of a block structure like a for loop, does not restrict that variable to the loop. Instead, the variable will be accessible from the entire function. It’s worth noting that the upcoming ECMAScript 6 will support block level scopes via the let keyword.
+</p>
+</div>
+</body>
+</html>

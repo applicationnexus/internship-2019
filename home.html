@@ -1,0 +1,21 @@
+<html>
+<head><title>Home Page</title>
+<script>
+$(document).ready(function()
+{
+setInterval('refreshPage',1000);
+});
+function refreshPage(){ location.reload();}
+</script>
+</head>
+
+	<frameset  rows="190,*" >
+	<frame src="header.html" name="header_frame" scrolling="no">
+	<frameset cols="400,*" >
+		<frame src="index.html" name="index_frame" >
+		<frame src="js_pg1.html" name="content_frame" >
+	</frameset>
+	
+</frameset>
+
+</html>
