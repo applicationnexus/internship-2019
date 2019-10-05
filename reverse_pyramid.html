@@ -1,0 +1,48 @@
+<html>
+<head>
+<style>
+	#star_center
+	{
+		text-align: center;
+	}
+
+	#button
+	{
+		background-color: #FFA500;
+        border: none;
+		color: white;
+		padding: 15px 32px;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+	   
+   
+	}
+</style>
+
+</head>
+<body>
+<div id="star_center">
+<script type="text/javascript" >
+	var rows=prompt('Enter number of row for pyramid between 1 to 10 for better result') ;
+	if(rows <=10 && rows > 0){
+		var i,j;
+		for(i=1;i<=rows;i++)
+		{
+			for(j=1;j<i;j++)
+				document.write('&nbsp');
+			
+			for(j=1;j<=(rows*2-(i*2-1));j++)
+				document.write('*'.fontsize(10));
+			
+			document.write('<br>');
+		}
+    }
+	else
+	alert("Wrong Input Enter number between 1 to 10");  
+ </script>
+ </div>
+  <br>
+  <center><button type="button" id="button" value="Run Again" onClick="window.location.reload();" > Run Again </button> </center>
+</body>
+</html>
