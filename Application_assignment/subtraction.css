@@ -1,0 +1,22 @@
+body{
+	background-image:"./mathop2.png";
+}
+.panel1{
+	  display: inline-block;
+  background: #000000;
+  min-height: 200px;
+  height: 100px;
+
+  margin-top: 150px;
+ margin-left:400px;
+  padding: 50px;
+
+  
+}
+label{
+  text-emphasis-style: bold;
+  color: #FFFFFF;
+}
+h2{
+	color: #FFFFFF;
+}
