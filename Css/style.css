@@ -1,0 +1,44 @@
+#taskContent{
+ 	margin-left: 10%;
+ 	margin-right: 10%;
+ 	font-weight: bold;
+}
+#urlAddress {
+    height: 30px;
+    width: 300px;
+    position: relative;
+    border: 2px solid #cdcdcd;
+    border-color: rgba(0, 0, 0, .14);
+    background-color: AliceBlue;
+    font-size: 14px;
+    margin-left: 12px;
+}
+#websiteDisplay{
+ 	width: 100%;
+ 	height: 500px;
+}
+h1{
+ 	text-align: center;
+ 	font-family: Comic Sans MS;
+} 
+#displayButton{
+	border-radius: 2px;
+	width: 150px;
+	height: 35px;
+	background-color: whitesmoke;
+}
+#displayButton:hover{
+	font-size: 16px;
+    width: 150px;
+    color: red;
+    background-color: lightgreen;
+}
+#displayUrl{
+	color: red;
+	font-size: 18px;
+	font-family: Comic Sans MS;
+}
+
+
+
+ 
