@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <style>
+            body{
+                font-size: 20px;
+            }
+            
+            div.demo{
+                background-color : aqua;
+                width : 50%;
+                padding : 30px;
+                text-align: center;
+            }
+        </style>
+    </head>
+<body>
+    <center>
+        <div class="demo">
+    
+        <br>
+        <h2> Days Difference </h2>
+        <br>
+            Start date : <input type="date" id="start" name="start_date"><br><br>
+            End date : <input type="date" id="end" name="end_date"><br>
+        <br><br> 
+            <input type="button" value="Find the difference" onclick="myFunction();">     <!--Function to display the output-->
+        <br><br>
+        <h2> Output : </h2>
+            <p id = "answer"> </p>
+        <br>
+    
+
+<script>
+function myFunction() {
+  var sdate = document.getElementById("start").value;
+  var edate = document.getElementById("end").value;
+  var date1 = new Date(sdate)                                       //converts string to date object
+              
+                
+                var date2 = new Date(edate)
+               
+                var oneDay = 24 * 60 * 60 * 1000;                   // hours*minutes*seconds*milliseconds
+                var diffDays = (date2.getTime() - date1.getTime()) / (oneDay);
+				
+				if(diffDays<0)
+				{
+				alert("End date must be greater than the start date")
+				}
+				else if(sdate=="" & edate=="")
+                    {
+                        alert("Please provide both dates");
+                    }
+                else
+				{
+				document.getElementById('answer').innerHTML="Total Days : " +diffDays+ " Days";
+				}          
+}
+</script>
+       </div>
+    </center>
+</body>
+</html>
