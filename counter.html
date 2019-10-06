@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style type="text/css">
+body {
+	margin:auto;
+	width:300px;
+    background-color:pink;
+     }
+b {
+    font-family:arial;
+    color:blue;
+    font-size:18px;
+  }
+.results { 
+          font-weight: bold;
+          font-family:arial;
+          font-size:18px;
+          color:blue;
+         }
+textarea {
+	      width: 400px;
+          height: 100px;
+          display: block;
+          font-family: arial;
+          font-size: 18px;
+          border-radius: 2px;
+          box-shadow: 5px 5px 5px grey;
+          border:blue 1px solid;
+          text-indent:10px;
+         }
+textarea:focus {
+                 outline: none;
+                 border:blue 1px solid;
+               }
+input[type=button] {
+                    padding:10px; 
+                    background:azure;
+                    border:blue 1px solid;
+                    background-color:lightgreen;
+                    cursor:pointer;
+                    -webkit-border-radius: 12px;
+                    box-shadow: 5px 5px 5px grey;
+                    border-radius: 5px; 
+                    font-family: arial;
+                    font-size: 18px;
+                   }
+</style>
+
+
+<script> 
+
+function vci_Count()
+ {
+    var TextVar = document.getElementById('User_Enter').value;
+    if (TextVar.length==0)
+   {
+    document.getElementById('User_Enter').focus();
+    alert("Enter your word or sentence");
+   }
+   else
+   { 
+     document.getElementById('word_string').innerHTML = "The word or string is <br />" + "<font color='red'>" +TextVar + ".</font>";
+     document.getElementById('vowels').innerHTML = "<font color='purple'>Number of Vowels :</font> "+ vowel_count(TextVar);
+     document.getElementById('consonants').innerHTML = " <font color='purple'>Number of Consonants :</font> "+ consonants_count(TextVar);
+     document.getElementById('integers').innerHTML = "<font color='purple'>Number of Integers :</font> "+ integers_count(TextVar);
+   }
+ }
+function clear_all()
+{
+ document.getElementById('User_Enter').value="";
+ document.getElementById('word_string').innerHTML="";
+ document.getElementById('vowels').innerHTML="";
+ document.getElementById('consonants').innerHTML="";
+ document.getElementById('integers').innerHTML="";
+ document.getElementById('User_Enter').focus();
+} 
+ 
+function vowel_count(str1)
+ {
+   var vowel_list ='aeiouAEIOU';
+   var vcount = 0;
+   for(var x = 0; x <str1.length ; x++)
+   {
+     if (vowel_list.indexOf(str1[x]) !== -1)
+     {
+       vcount += 1;
+     }
+ 
+   }
+   return vcount;
+ }
+
+function consonants_count(str1)
+ {
+  var consonant_list ='bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ';
+  var c_count = 0;
+  for(var x = 0; x <str1.length ; x++)
+  {
+   if (consonant_list.indexOf(str1[x]) !== -1)
+   {
+    c_count += 1;
+   }
+  }
+  return c_count;
+ }
+function integers_count(str1)
+ {
+   var integer_list ='0123456789';
+   var icount = 0;
+   for(var x = 0; x <str1.length ; x++)
+   {
+     if (integer_list.indexOf(str1[x]) !== -1)
+     {
+      icount += 1;
+     }
+   }
+   return icount;
+ }
+
+</script>
+</head>
+<body>
+ <form>
+   <br />
+   <br />
+       <b><h3>Enter a word or a sentence</h3></b>
+
+
+   <textarea id='User_Enter' autofocus="autofocus"></textarea>
+   <br><br>
+   <input type='button' onclick='vci_Count()' value='OK'/> &nbsp
+   <input type='button' onclick='clear_all()' value='CLEAR'/>
+ </form>
+   <br	/>
+   <br	/>
+   <br	/>
+  <div class="results" id='word_string'></div> 
+   <br />
+
+<div class="results" id='vowels'> </div>
+<div class="results" id='consonants'> </div>
+<div class="results" id='integers'> </div>
+
+
+
+</body>
+
+
+</html>
