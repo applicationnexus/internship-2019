@@ -1,0 +1,219 @@
+<html>
+<head>
+<h3>Weight Converter</h3>
+</head>
+
+<style> 
+body{
+		width:70%;
+		margin:0 auto;
+}
+h4{
+ font-family:calibri;
+  font-size:20px;
+}
+select{
+  width: 30%;
+  display:block;
+  padding: 16px 20px;
+  font-family:calibri;
+  font-size:20px;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+}
+input[type=text]
+{
+  display:block;
+  width: 30%;
+  padding: 16px 20px;
+  
+  border-radius: 4px;
+  background-color: #f1f1f1;
+}
+
+button{
+	display:inline-block;
+	border:none;
+	border-radius:3px;
+	background-color:#4CAF50;
+	padding:10px 15px;
+	padding-top:5px;
+	font-family:calibri;
+	font-size:20px;
+	
+	
+}
+label{
+		padding-top:16px; 
+		display:block;
+	}
+#demo{
+	width:60%;
+	box-sizing:border-box;
+	border:none;
+	border-radius:3px;
+	background-color:#CCFF99;
+	padding:10px 25px;
+	font-family:calibri;
+	font-size:20px;
+	color:#006600;
+	visibility:hidden;
+}
+	
+</style>
+<body>
+<script>
+function convert()
+{
+	
+	
+		var a= document.getElementById("unit").value;
+		var unit=a;
+		var b= document.getElementById("unit2").value;
+	
+		var n = Number(document.getElementById("number").value);
+		//a=n;
+		if(n=="")
+		{
+		alert("Please Enter Value");
+		}else
+		document.getElementById('demo').style.visibility = "visible";https://plnkr.co/users/sharad21241
+	
+	//document.write(a);
+	//document.write(b);
+//	document.write(a,unit);
+	if((a==='kg') && (b==='Kilograms'))
+	{
+		output=n;
+	}else
+	if((a==='kg') && (b==='Grams'))
+	{
+		output=n*1000;
+		//document.getElementById("demo").value=n*1000;
+		
+	}else
+	if((a==='kg') && (b==='Pounds'))
+	{
+		output=n*2.2046;
+	}else
+	if((a==='kg') && (b==='Stones'))
+	{
+		output=n*0.1574;
+	}else
+	if((a==='kg') && (b==='Ounces'))
+	{
+		output=n*35.274;
+	}else 
+	
+	if((a==='gm') && (b==='Kilograms'))
+	{
+		output=n/1000;
+	}else
+	if((a==='gm') && (b==='Grams'))
+	{
+		output=n;
+	}else
+	if((a==='gm') && (b==='Pounds'))
+	{
+		output=n*0.0022046;
+	}else
+	if((a==='gm') && (b==='Stones'))
+	{
+		output=n*0.00015747;
+	}else
+	if((a==='gm') && (b==='Ounces'))
+	{
+		output=n*0.035274;
+	}else 
+	if((a==='pnd') && (b==='Kilograms'))
+	{
+		output=n/2.2046;
+	}else
+	if((a==='pnd') && (b==='Grams'))
+	{
+		output=n/0.0022046;
+	}else
+	if((a==='pnd') && (b==='Pounds'))
+	{
+		output=n;
+	}else
+	if((a==='pnd') && (b==='Stones'))
+	{
+		output=n*0.071429;
+	}else
+	if((a==='pnd') && (b==='Ounces'))
+	{
+		output=n*16;
+	}else 
+	if((a==='stn') && (b==='Kilograms'))
+	{
+		output=n/0.15747;
+	}else
+	if((a==='stn') && (b==='Grams'))
+	{
+		output=n/0.00015747;
+	}else
+	if((a==='stn') && (b==='Pounds'))
+	{
+		output=n*14;
+	}else
+	if((a==='stn') && (b==='Stones'))
+	{
+		output=n;
+	}else
+	if((a==='stn') && (b==='Ounces'))
+	{
+		output=n*224;
+	}else 
+	if((a==='onc') && (b==='Kilograms'))
+	{
+		output=n/35.274;
+	}else
+	if((a==='onc') && (b==='Grams'))
+	{
+		output=n/0.035274;
+	}else
+	if((a==='onc') && (b==='Pounds'))
+	{
+		output=n*0.0625;
+	}else
+	if((a==='onc') && (b==='Stones'))
+	{
+		output=n*0.0044643;
+	}else
+	if((a==='onc') && (b==='Ounces'))
+	{
+		output=n;
+	}
+	
+	document.getElementById('demo').value= "Converted Value in ("+b+"): "+output;
+	
+	//document.write(output);
+}
+</script>
+<h4>From:</h4>
+<select id = "unit">
+<option id="kg" value ="kg">Kilogram</option>
+<option value ="gm">Gram</option>
+<option value ="pnd">Pounds</option>
+<option value ="stn">Stones</option>
+<option value ="onc">Ounces</option>
+</select>
+
+<h4>To:</h4>
+<select id = "unit2" >
+<option id="kg" value="Kilograms"> Kilogram </option>
+<option id="gm" value="Grams"> Gram</option>
+<option id="pounds" value="Pounds"> Pounds</option>
+<option id="stones" value="Stones"> Stones</option>
+<option id="ounces" value="Ounces"> Ounces</option>
+
+</select>
+<h4>Value</h4>
+<input type="text" id="number"><br>
+<button type="submit" name="Convert" onclick="convert()">Convert</button>
+<label for="button">
+<div class="alert success">
+<input type="text" id="demo" onkeydown="return false">
+</div>
+
