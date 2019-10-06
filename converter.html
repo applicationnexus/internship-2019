@@ -1,0 +1,53 @@
+
+<script>function Conversion() {
+    var value = document.getElementById("value").value,
+        conversion = document.getElementById("conversion"),
+        madeSelection = document.getElementById("Selection"), // get the select
+        selection = madeSelection.options[madeSelection.selectedIndex].value, // get the selected option
+        ans = 0;
+    value = parseFloat(value);
+    if (!isNaN(value)) {
+        switch (selection) {
+            case "6":
+                ans = value * 1.25;
+                break;
+            case "5":
+                ans = value * 3.38;
+                break;
+            case "4":
+                ans = value * 0.8;
+                break;
+            case "3":
+                ans = value * 2.7;
+                break;
+            case "2":
+                ans = value * 0.3;
+                break;
+            case "1":
+                ans = value * 0.37;
+                break;
+            default:
+                ans = 0;
+                break;
+        }
+    }
+    conversion.value = ans;
+}</script>
+<center>
+<select name="converts" id="Selection">
+    <option>Choose Option</option>
+    <option value="1" >EC to US</option>
+    <option value="2" >EC to Euro</option>
+    <option value="3" >US to EC</option>
+    <option value="4" >US to Euro</option>
+    <option value="5" >Euro to EC</option>
+    <option value="6" >Euro to US</option>
+</select>
+<br /><br />
+
+<label for="value">Value</label> &nbsp&nbsp&nbsp&nbsp
+<input type="text" id="value"><br><br>
+<label for="conversion">Conversion</label>
+<input type="text" id="conversion"><br><br>
+<input type="Button" onclick="Conversion()" value="Convert">
+</center>
