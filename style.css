@@ -1,0 +1,19 @@
+h1
+{
+	color:black;
+	font-family: verdana;
+	font-size: 40px;
+}
+input[type=text]
+{
+	width: 10%;
+	padding: 10px 15px;
+  	margin: 8px 0;
+  	/*box-sizing: border-box;*/
+}
+input[type=button]
+{
+	width:10%;
+	padding: 10px 10px;
+	color:blue;
+}

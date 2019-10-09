@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="convert.js"></script>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+		<h1>CURRENCY CONVERTER</h1>
+		<div name="curr" class="custom-select" style="width:50%">
+			<label>From:</label><br>
+		<select class="form-control" id="converter1" style="width:30%;">
+					<option value="INR">INR</option>
+					<option value="Dollar">Dollar</option>
+					<option value="Pound">Pound</option>
+					<option value="Euro">Euro</option>
+					<option value="Yen">Yen</option>
+		</select>
+		</div>
+		<br>
+		<div name="curr" class="custom-select" style="width:50%">
+			<label>To:</label><br>
+		<select class="form-control" id="converter2" style="width:30%;">
+					<option value="INR">INR</option>
+					<option value="Dollar">Dollar</option>
+					<option value="Pound">Pound</option>
+					<option value="Euro">Euro</option>
+					<option value="Yen">Yen</option>
+		</select>
+		</div>
+		<br>	
+		<label>Amount</label>
+		<input type="text" class="form-control" id="amt">
+		<br>
+	
+		<input type="button" class="form-control"  value="CONVERT" id="btnsubmit" onclick="calculate()">
+		<br>
+		
+		<div class="container">
+		<div class="panel panel-default">
+			<div class="panel-group">
+				Exchange Rate   	<input type="text" class="form-control" id="amount"><br>
+				Converted Amount 	<input type="text" class="form-control" id="result">
+			</div>
+		</div>
+		</div>
+</body>
+</html>
