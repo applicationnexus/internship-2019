@@ -1,0 +1,40 @@
+<html>
+   <head>
+     <link rel="stylesheet" type="text/css" href="style.css">
+     
+     <script type="text/javascript">
+     
+       function imgformat()
+       {
+        var img1,height,width;
+        img1= document.getElementById("url").value;
+        height= document.getElementById("hei").value;
+        width= document.getElementById("wid").value;
+        
+        document.getElementById("myImage").src =img1;
+        document.getElementById("myImage").height =height;
+        document.getElementById("myImage").width =width;
+        
+        
+     }
+     function reset()
+     {
+
+       document.getElementById("url").value = "";
+     }
+     </script>
+   </head>
+  <body>
+    <h1>Dynamic Image Formating</h1>
+    Image URL:<br>
+    <input type="text" name="url1" id="url" value="https://www.applicationnexus.com/assets/images/home-page-graphic.png"/>&nbsp&nbsp<input type="reset" name="reset" id="reset" value="Reset" onclick="reset()"/>
+    <br>
+    Image Height:<br>
+    <input type="text" name="height" id="hei" placeholder="Enter Height"/><br>
+     Image Width:<br>
+    <input type="text" name="Width" id="wid" placeholder="Enter Width"/><br>
+    <input type="submit" name="subbtn" value="Submit" onclick="imgformat()"/>
+    <br><br>
+   <img src="https://www.applicationnexus.com/assets/images/home-page-graphic.png" id="myImage" />
+  </body>
+</html>
