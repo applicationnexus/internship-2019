@@ -4,7 +4,7 @@
     function res()
     {
       
-      
+   
 
 document.getElementById('loanamt').value=" ";
 document.getElementById('repamt').value=" ";
@@ -21,7 +21,7 @@ function abc()
 
 
 
-  
+
   var loanamt=document.getElementById('loanamt').value;
   var repamt=document.getElementById('repamt').value;
   var intamt=document.getElementById('intamt').value;
@@ -30,16 +30,19 @@ function abc()
 
 if(loanamt=="")
 {
-  document.getElementById("msg1").innerHTML="fill this field"
+  
+  alert("Enter The Loan Amount ")
 }
 else if (repamt=="") 
 {
-document.getElementById("msg2").innerHTML="fill this field"
+
+alert("Enter The Repayment Interest Rate ")
 }
 else
 if(intamt=="")
 {
-  document.getElementById("msg3").innerHTML="fill this filed";
+ 
+ alert("Enter The Interest Rate")
 }
 else
 {
@@ -65,3 +68,7 @@ document.getElementById("payamt").value=c;
 }
 
 }
+
+
+    
+  
