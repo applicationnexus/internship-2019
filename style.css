@@ -1,0 +1,23 @@
+.button {
+  background-color: #bfbfbf;
+  
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  width:90%;
+  height:45px;
+}
+.tab1
+{
+	border-radius:5px;
+	border:3px solid black;
+	width:400;
+	height:300;
+}
+
+input[type=numeric]
+{
+	
+	text-align:right;
+}

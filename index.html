@@ -1,0 +1,60 @@
+<html>
+	<head>
+		<title>EMI CALCULATOR</title>
+		<link rel="stylesheet" href="style.css">
+		<script type="text/javascript" src="emi.js"></script>
+	</head>
+	<body>
+		<center>
+			<h3>EMI CALCULATOR</h3>
+			<form method="POST">
+			<table frame="Box" class="tab1" cellspacing=18>
+			<tr>
+				<td> Loan Amount </td>
+				<td>
+					<input type=numeric name="Principle" id="p1"/>
+				</td>
+			</tr>
+			<tr>
+				<td>Repayment In Month</td>
+				<td>
+					<input type=numeric name="Repay" id="month" />
+				</td>
+			</tr>
+			<tr>
+				<td>Interest Rate</td>
+				<td>
+					<input type=numeric name="Months" id="repay" />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<button type=reset name=reset class="button" >Reset</button>
+				</td>
+				<td>
+					<button type=button name="submit" class="button"  onclick="emicalculate()">Submit </button>
+				</td>
+			</tr>
+			<tr>
+				<td>EMI</td>
+				<td>
+					<input type=numeric name="emi" id="emi" />
+				</td>
+			</tr>
+			<tr>
+				<td>Interest Payable</td>
+				<td>
+					<input type=numeric name="intpay" id="intpay" />
+				</td>
+			</tr>
+			<tr>
+				<td>Total payable</td>
+				<td>
+					<input type=numeric name="totpay" id="tpay"/>
+				</td>
+			</tr>
+			</table>    
+			</form>
+		</center>
+	</body>
+</html>
