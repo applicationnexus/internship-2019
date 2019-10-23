@@ -1,0 +1,59 @@
+.container{
+	position:absolute;
+	top:5%;
+	left:10%;
+	width:80%;
+	height:80%;
+	background-color:rgba(255, 252, 207, 1);
+}
+
+#day{
+	position:absolute;
+	top:15%;
+	left:40%;
+	color:rgba(6, 4, 7, 1);
+	font-family:serif;
+	font-size:250%;
+	font-weight:800;
+}
+
+#month{
+	position:absolute;
+	top:35%;
+	left:40%;
+	color:rgba(6, 4, 7, 1); 
+	font-family:serif;
+	font-size:250%;
+	font-weight:800;
+	
+}
+
+.container input[type=button]:nth-child(3){
+	position:absolute;
+	top:75%;
+	left:30%;
+	background-color:rgba(255, 136, 5, 1);
+	color:rgba(254, 227, 196, 1);
+	padding:2%;
+	border-radius:50px;
+	border:none;
+	font-size:120%;
+	font-family:sans-serif;
+	font-weight:700;
+	box-shadow:2px 5px 10px rgba(0,0,0,0.4);
+}
+
+.container input[type=button]:nth-child(4){
+	position:absolute;
+	top:75%;
+	left:50%;
+	background-color:rgba(255, 136, 5, 1);
+	color:rgba(254, 227, 196, 1);
+	padding:2%;
+	border-radius:50px;
+	border:none;
+	font-size:120%;
+	font-family:sans-serif;
+	font-weight:700;
+	box-shadow:2px 5px 10px rgba(0,0,0,0.4);
+}
